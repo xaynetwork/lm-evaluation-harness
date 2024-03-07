@@ -22,7 +22,6 @@ from lm_eval.logging_utils import add_env_info, get_git_commit_hash
 from lm_eval.tasks import TaskManager, get_task_dict
 from lm_eval.utils import (
     eval_logger,
-    positional_deprecated,
     simple_parse_args_string,
 )
 
@@ -34,7 +33,6 @@ if TYPE_CHECKING:
 from lm_eval.caching.cache import delete_cache
 
 
-@positional_deprecated
 def simple_evaluate(
     model,
     model_args: Optional[Union[str, dict, None]] = None,
@@ -275,7 +273,6 @@ def simple_evaluate(
 decontaminate_suffix = "_decontaminate"
 
 
-@positional_deprecated
 def evaluate(
     lm: "LM",
     task_dict,
